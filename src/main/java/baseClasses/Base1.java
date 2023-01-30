@@ -21,7 +21,9 @@ public class Base1 {
 		ChromeDriver driver = new ChromeDriver(options);
 		
 		driver.get("https://kite.zerodha.com/");
+		
 		driver.manage().window().maximize();
+		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		
 		return driver;
