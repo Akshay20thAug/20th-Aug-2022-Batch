@@ -47,5 +47,15 @@ WebDriver driver;
 		return true;	
 	}
 	
+	
+	public boolean checkForFundPage(String a) {
+		try {
+			explicitWait(driver, addFundButton, 5);
+		}catch(Exception e) {
+			return false;
+		}
+		return true;	
+	}
+	
 
 }
