@@ -42,5 +42,9 @@ public class LoginPage extends Util1{
 		sublitBtn.click();
 	}
 	
+	public void clickOnLoginBtn(String a) {
+		sublitBtn.click();
+	}
+	
 
 }
