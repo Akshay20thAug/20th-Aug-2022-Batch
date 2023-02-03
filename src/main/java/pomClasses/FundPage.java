@@ -96,6 +96,9 @@ public class FundPage extends Util1{
 	}
 	
 	
+	public String getDepositeConfirmationAmount(int a) {
+		return conformationAmount.getText().split(" ")[1];
+	}
 	
 	
 }
