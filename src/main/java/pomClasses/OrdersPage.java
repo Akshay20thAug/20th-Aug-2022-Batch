@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilClasses.Util1;
 
-public class ProfilePage extends Util1{
-	
+public class OrdersPage extends Util1{
+
 WebDriver driver;
 	
 	@FindBy(xpath="//button[text()='Add funds ']")
@@ -18,21 +18,9 @@ WebDriver driver;
 	@FindBy(xpath="//h1[text()='Deposit funds']")
 	private WebElement depositeText;
 	
-	@FindBy(xpath="//input[@id='addfunds_amount']")
-	private WebElement depositeAmountInputField;
 	
-	@FindBy(xpath="//input[@id='addfunds_vpa']")
-	private WebElement upiInputField;
-	
-	@FindBy(xpath="//button[@id='addfunds_submit']")
-	private WebElement continueButton;
-	
-	@FindBy(xpath="//h4[@class='upi-status-amount']")
-	private WebElement conformationAmount;
-	
-	
-	
-	public ProfilePage(WebDriver driver) {
+
+	public OrdersPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 		this.driver=driver;
 	}
@@ -48,7 +36,7 @@ WebDriver driver;
 	}
 	
 	
-	public boolean checkForFundPage(String a) {
+	public boolean checkForFundPage(int a) {
 		try {
 			explicitWait(driver, addFundButton, 5);
 		}catch(Exception e) {
@@ -57,5 +45,5 @@ WebDriver driver;
 		return true;	
 	}
 	
-
+	
 }
